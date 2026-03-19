@@ -1,0 +1,7 @@
+venv/
+db/vulntracker.db
+reports/*.csv
+__pycache__/
+*.pyc
+.env
+.DS_Store
