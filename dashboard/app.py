@@ -50,11 +50,13 @@ def index():
     vulns = get_vulnerabilities()
     stats = get_stats(vulns)
     return render_template("index.html", vulns=vulns, stats=stats)
+
 @app.route("/export")
 def export():
     from reports.exporter import export_to_csv
     filename = export_to_csv()
     return redirect(url_for("index"))
+    
 @app.route("/update_status", methods=["POST"])
 def update_status():
     vuln_id = request.form.get("vuln_id")
