@@ -1,4 +1,5 @@
 # VulnTracker 🔐
+![CI](https://github.com/shayvon-ballard/vulntracker/actions/workflows/test.yml/badge.svg)
 A Python-based vulnerability management tool that scans environments for known security vulnerabilities, enriches findings with NVD API data, and tracks remediation through a web dashboard.
 
 ## Screenshots
