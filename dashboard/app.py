@@ -7,7 +7,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 app = Flask(__name__)
 
-DB_PATH = "db/vulntracker.db"
+DB_PATH = os.environ.get("DB_PATH", "db/vulntracker.db")
 
 def get_vulnerabilities():
     conn = sqlite3.connect(DB_PATH)

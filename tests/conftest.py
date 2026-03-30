@@ -30,13 +30,15 @@ def app():
     conn.commit()
     conn.close()
 
+    os.environ["DB_PATH"] = db_file
+
     import app as flask_module
-    flask_module.app.config["TESTING"] = True
     flask_module.DB_PATH = db_file
 
     yield flask_module.app
 
     os.unlink(db_file)
+    del os.environ["DB_PATH"]
 
 @pytest.fixture
 def client(app):
