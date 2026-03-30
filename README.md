@@ -13,6 +13,17 @@ A Python-based vulnerability management tool that scans environments for known s
 - Remediation workflow tracking (Open, In Progress, Resolved)
 - CSV report export for management reporting
 
+## Testing
+Automated test suite built with pytest covering:
+- Route availability and response validation
+- HTTP method enforcement (access control)
+- 404 handling for unknown endpoints
+
+Run tests:
+```bash
+pytest tests/ -v
+```
+
 ## Tech Stack
 - Python 3
 - Flask
